@@ -48,7 +48,7 @@ action_class do
   end
 
   def module_exists?
-    !shell_out('perl', '-M', new_resource.module_name, '-e', '1').error?
+    !shell_out('perl', "-M#{new_resource.module_name}", '-e', '1').error?
   end
 
   def cpanm_install_cmd
