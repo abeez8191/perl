@@ -31,6 +31,8 @@ when 'debian'
   default['perl']['packages'] = %w(perl libperl-dev)
 when 'windows'
   default['perl']['version'] = '5.26.1.1'
+when 'freebsd'
+  default['perl']['packages'] = %w(perl5)
 else
   default['perl']['packages'] = %w(perl)
 end
